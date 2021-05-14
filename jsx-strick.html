@@ -8,18 +8,13 @@
     <script type="text/babel">
         const root = document.getElementById('root')
 
-        // const element = React.createElement('div', {
-        //     children: 'Hello Word',
-        //     className: 'container'
-        // })
-       
        const children = "Hello Word"
        const className = "container"
+
        const props = { children, className}
+       
        const element = <div {...props} ></div>
+
         ReactDOM.render(element, root)
-        // const element = document.createElement('div')
-        // element.textContent = 'Hello Word'
-        // root.appendChild(element)
     </script>
 </body>
