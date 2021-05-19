@@ -1,0 +1,29 @@
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@16.12.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+
+    <script type="text/babel">
+      const rootElement = document.getElementById('root')
+  
+      function CaracterCount( {text} ) {
+          const length = text.length ? text.length : " No"
+        return (
+            <div>
+                {`The text "${text}" has `} { text.length ? <strong>{text.length}</strong> : " No"} caracters
+            </div>
+        )
+      }
+
+      const element = (
+          <>
+            <CaracterCount text="Hello Word" />
+            <CaracterCount text="" />
+          </>
+      )
+  
+      ReactDOM.render(element, rootElement)
+    </script>
+  </body>
+  
